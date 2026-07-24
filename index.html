@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- This line tells the browser "this is a modern HTML5 document" -->
+<html lang="en">
+<head>
+  <!-- The <head> holds info ABOUT the page. Nothing in here is visible on the page itself. -->
+  <meta charset="UTF-8">
+  <title>Vespera FX — Minimal Dark Wallpapers</title>
+  <!-- The <title> is what shows in the browser tab -->
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- This one line replaces that whole block. Both pages now pull from the same file. -->
+</head>
+
+<body>
+  <!-- Everything in <body> IS visible on the page -->
+
+  <header>
+    <div class="logo">Vespera<span>FX</span></div>
+    <nav>
+      <a href="categories.html">Categories</a>
+      <a href="index.html" class="active">Latest</a>
+      <a href="#">Telegram</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Wallpapers for the quiet hours.</h1>
+    <p>Original, AI-crafted dark and minimal wallpapers — free to download, made for people who like their screens calm.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <img src="images/abstract-shape.png" alt="Abstract violet shape on dark background">
+      <div class="label">Obsidian Drift</div>
+    </div>
+    <div class="card">
+      <img src="images/lone-tree.png" alt="Lone tree silhouette under violet night sky">
+      <div class="label">Violet Hour</div>
+    </div>
+    <div class="card">
+      <img src="images/mountain.png" alt="Mountain silhouette with glowing edge at night">
+      <div class="label">Low Tide</div>
+    </div>
+    <!-- Each card is now: an <img> (the actual wallpaper) + a .label div floating over the bottom -->
+  </section>
+
+  <!-- The lightbox itself: one shared box, reused for whichever wallpaper you click -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <a class="lightbox-download" id="lightboxDownload" href="" download>Download Wallpaper</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

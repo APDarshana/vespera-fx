@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Categories — Vespera FX</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Same stylesheet as index.html - this page automatically looks consistent with zero extra CSS -->
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Vespera<span>FX</span></div>
+    <nav>
+      <a href="categories.html" class="active">Categories</a>
+      <a href="index.html">Latest</a>
+      <a href="#">Telegram</a>
+    </nav>
+    <!-- Notice: "Categories" now has class="active" here, but not on index.html. -->
+    <!-- Same CSS class, different page, so it's always visible which page you're on. -->
+  </header>
+
+  <section class="page-heading">
+    <h1>Browse by category</h1>
+    <p>Every wallpaper, sorted by mood.</p>
+  </section>
+
+  <h2 class="category-label">Abstract</h2>
+  <section class="grid">
+    <div class="card">
+      <img src="images/abstract-shape.png" alt="Abstract violet shape on dark background">
+      <div class="label">Obsidian Drift</div>
+    </div>
+    <div class="card">
+      <img src="images/glass-orb.png" alt="Floating glass orb with amber glow">
+      <div class="label">Ember Sphere</div>
+    </div>
+  </section>
+
+  <h2 class="category-label">Landscape</h2>
+  <section class="grid">
+    <div class="card">
+      <img src="images/lone-tree.png" alt="Lone tree silhouette under violet night sky">
+      <div class="label">Violet Hour</div>
+    </div>
+    <div class="card">
+      <img src="images/mountain.png" alt="Mountain silhouette with glowing edge at night">
+      <div class="label">Low Tide</div>
+    </div>
+    <div class="card">
+      <img src="images/ocean-horizon.png" alt="Calm ocean horizon with moon reflection">
+      <div class="label">Silent Tide</div>
+    </div>
+    <div class="card">
+      <img src="images/city-skyline.png" alt="Distant city skyline silhouette at sunset">
+      <div class="label">Amber Line</div>
+    </div>
+  </section>
+
+  <h2 class="category-label">Architecture</h2>
+  <section class="grid">
+    <div class="card">
+      <img src="images/spiral-staircase.png" alt="Spiral staircase viewed from above">
+      <div class="label">Descent</div>
+    </div>
+  </section>
+
+  <!-- Same lightbox markup as index.html, powered by the same shared script.js -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img class="lightbox-image" id="lightboxImage" src="" alt="">
+    <a class="lightbox-download" id="lightboxDownload" href="" download>Download Wallpaper</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

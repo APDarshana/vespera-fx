@@ -1,0 +1,186 @@
+/* This is CSS: it controls how things LOOK. HTML controls WHAT exists, CSS controls HOW it appears. */
+/* This file is now shared by every page on the site - edit it once, every page updates. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* This resets every element to have no default spacing, so we control it ourselves */
+}
+
+body {
+  background: #0B0C0E;
+  color: #EDEDED;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+header {
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1E1F22;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #6E6AF6;
+  /* A single accent color used sparingly, on purpose */
+}
+
+nav a {
+  color: #A0A0A0;
+  text-decoration: none;
+  margin-left: 28px;
+  font-size: 14px;
+}
+
+nav a.active {
+  color: #EDEDED;
+  /* Highlights whichever page you're currently on */
+}
+
+.hero {
+  padding: 96px 48px 64px;
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: #A0A0A0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.page-heading {
+  padding: 64px 48px 32px;
+}
+
+.page-heading h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.page-heading p {
+  color: #A0A0A0;
+  font-size: 15px;
+}
+
+.category-label {
+  padding: 0 48px;
+  font-size: 13px;
+  color: #6E6AF6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 48px 80px;
+  /* auto-fill + minmax means the grid rearranges itself on any screen size */
+}
+
+.card {
+  aspect-ratio: 9 / 16;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  /* overflow: hidden makes sure the image respects the rounded corners instead of poking out square */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* object-fit: cover crops the image to fill the card without stretching or squishing it */
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.04);
+  /* A tiny zoom on hover - a small, deliberate touch instead of a flashy effect */
+}
+
+.card .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  font-size: 13px;
+  color: #EDEDED;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  /* This gradient overlay is what makes white text readable over ANY image, dark or light */
+}
+
+.card {
+  cursor: pointer;
+  /* Signals to the visitor that clicking this does something */
+}
+
+/* --- Lightbox: the full-screen viewer that appears when you click a card --- */
+
+.lightbox {
+  display: none;
+  /* Hidden by default. JavaScript adds the "open" class to reveal it. */
+  position: fixed;
+  inset: 0;
+  /* inset: 0 is shorthand for top/right/bottom/left: 0 - covers the whole screen */
+  background: rgba(5, 5, 8, 0.92);
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.lightbox.open {
+  display: flex;
+  /* This is the only rule that matters for showing/hiding - JS just toggles this class */
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-download {
+  background: #6E6AF6;
+  color: #EDEDED;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  background: none;
+  border: none;
+  color: #EDEDED;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+}
