@@ -172,74 +172,6 @@ nav a.active {
   color: #EDEDED;
 }
 
-/* --- Mobile adjustments: everything above was sized for desktop. --- */
-/* This block only applies below 600px wide, i.e. phones. */
-@media (max-width: 600px) {
-
-  header {
-    padding: 20px 20px;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  nav a {
-    font-size: 13px;
-    padding: 7px 14px;
-    margin-left: 8px;
-  }
-
-  .hero {
-    padding: 48px 20px 40px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    /* Was 48px - too large for a narrow screen, wraps awkwardly and crowds the caption below it */
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  .page-heading {
-    padding: 40px 20px 24px;
-  }
-
-  .page-heading h1 {
-    font-size: 26px;
-  }
-
-  .grid, .category-grid {
-    padding: 0 20px 48px;
-    gap: 14px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    /* Overrides the desktop auto-fill rule, which was collapsing to 1 column
-       on narrow screens since nothing fit its 260px minimum - that's what
-       caused the "one wallpaper per screen, scroll like reels" feel. */
-    gap: 10px;
-  }
-
-  .card .label {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-  .category-label {
-    padding: 0 20px;
-  }
-
-  .breadcrumb {
-    padding: 0 20px;
-  }
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -352,4 +284,72 @@ nav a.active {
   font-size: 13px;
   color: #A0A0A0;
   /* Shows "1152 x 896 · 461 KB" style details, pulled from each image's real file data */
+}
+
+/* --- Mobile adjustments: everything above was sized for desktop. --- */
+/* This block only applies below 600px wide, i.e. phones. */
+@media (max-width: 600px) {
+
+  header {
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 14px;
+    margin-left: 8px;
+  }
+
+  .hero {
+    padding: 48px 20px 40px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    /* Was 48px - too large for a narrow screen, wraps awkwardly and crowds the caption below it */
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .page-heading {
+    padding: 40px 20px 24px;
+  }
+
+  .page-heading h1 {
+    font-size: 26px;
+  }
+
+  .grid, .category-grid {
+    padding: 0 20px 48px;
+    gap: 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Overrides the desktop auto-fill rule, which was collapsing to 1 column
+       on narrow screens since nothing fit its 260px minimum - that's what
+       caused the "one wallpaper per screen, scroll like reels" feel. */
+    gap: 10px;
+  }
+
+  .card .label {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .category-label {
+    padding: 0 20px;
+  }
+
+  .breadcrumb {
+    padding: 0 20px;
+  }
 }
