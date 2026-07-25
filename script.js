@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImage = document.getElementById('lightboxImage');
   const lightboxDownload = document.getElementById('lightboxDownload');
   const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxName = document.getElementById('lightboxName');
+  const lightboxMeta = document.getElementById('lightboxMeta');
 
   // querySelectorAll finds EVERY element matching a CSS selector - here, every .card.
   const cards = document.querySelectorAll('.card');
@@ -25,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // Copy that card's image into the lightbox's big image.
       lightboxImage.src = img.src;
       lightboxImage.alt = img.alt;
+
+      // Read the resolution and file size we stored on the card itself
+      // (data-resolution and data-size attributes - see the HTML for these).
+      lightboxName.textContent = label;
+      lightboxMeta.textContent = card.dataset.resolution + ' · ' + card.dataset.size;
 
       // Point the download link at the same image, and give the downloaded
       // file a clean name based on the wallpaper's label instead of a random filename.

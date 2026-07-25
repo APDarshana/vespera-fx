@@ -34,14 +34,26 @@ header {
 }
 
 nav a {
-  color: #A0A0A0;
+  color: #D5D5D5;
   text-decoration: none;
-  margin-left: 28px;
+  margin-left: 12px;
   font-size: 14px;
+  padding: 9px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background: rgba(110, 106, 246, 0.18);
+  color: #EDEDED;
 }
 
 nav a.active {
   color: #EDEDED;
+  background: rgba(110, 106, 246, 0.28);
+  border-color: rgba(110, 106, 246, 0.4);
   /* Highlights whichever page you're currently on */
 }
 
@@ -256,4 +268,20 @@ nav a.active {
   font-size: 32px;
   cursor: pointer;
   line-height: 1;
+}
+
+.lightbox-info {
+  text-align: center;
+}
+
+.lightbox-info h3 {
+  font-size: 18px;
+  color: #EDEDED;
+  margin-bottom: 4px;
+}
+
+.lightbox-info .meta {
+  font-size: 13px;
+  color: #A0A0A0;
+  /* Shows "1152 x 896 · 461 KB" style details, pulled from each image's real file data */
 }
