@@ -218,6 +218,19 @@ nav a.active {
     gap: 14px;
   }
 
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Overrides the desktop auto-fill rule, which was collapsing to 1 column
+       on narrow screens since nothing fit its 260px minimum - that's what
+       caused the "one wallpaper per screen, scroll like reels" feel. */
+    gap: 10px;
+  }
+
+  .card .label {
+    font-size: 12px;
+    padding: 10px;
+  }
+
   .category-label {
     padding: 0 20px;
   }
