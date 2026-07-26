@@ -300,9 +300,24 @@ nav a.active {
 @media (max-width: 600px) {
 
   header {
-    padding: 20px 20px;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 20px;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+  }
+
+  nav a {
+    flex: 1;
+    text-align: center;
+    margin-left: 0;
+    padding: 9px 8px;
+    font-size: 13px;
   }
 
   .logo {

@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = card.querySelector('img');
       const label = card.querySelector('.label').textContent;
 
-      // Copy that card's image into the lightbox's big image.
-      lightboxImage.src = img.src;
+      // The card shows a small thumbnail for fast loading, but the lightbox
+      // needs the full-resolution original - that's stored in data-full.
+      lightboxImage.src = img.dataset.full || img.src;
       lightboxImage.alt = img.alt;
 
       // Read the resolution and file size we stored on the card itself
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Point the download link at the same image, and give the downloaded
       // file a clean name based on the wallpaper's label instead of a random filename.
-      lightboxDownload.href = img.src;
+      lightboxDownload.href = img.dataset.full || img.src;
       lightboxDownload.setAttribute('download', label.replace(/\s+/g, '-').toLowerCase() + '.png');
 
       // Reveal the lightbox by adding the "open" class (see styles.css for what that triggers).
