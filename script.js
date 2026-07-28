@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Point the download link at the same image, and give the downloaded
       // file a clean name based on the wallpaper's label instead of a random filename.
       lightboxDownload.href = img.dataset.full || img.src;
-      lightboxDownload.setAttribute('download', label.replace(/\s+/g, '-').toLowerCase() + '.png');
+      lightboxDownload.setAttribute('download', label.replace(/\s+/g, '-').toLowerCase() + '.jpg');
 
       // Reveal the lightbox by adding the "open" class (see styles.css for what that triggers).
       lightbox.classList.add('open');
